@@ -24,10 +24,6 @@ public class PlayerMovement : MonoBehaviour
         input.Normalize();
 
         moveInput = transform.forward * input.y + transform.right * input.x;
-    }
-
-    void FixedUpdate()
-    {
-        controller.Move(moveInput * MoveSpeed * Time.fixedDeltaTime);
+        controller.Move(moveInput * MoveSpeed * Time.deltaTime);
     }
 }
