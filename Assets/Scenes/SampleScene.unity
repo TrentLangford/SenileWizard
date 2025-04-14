@@ -922,7 +922,7 @@ MonoBehaviour:
     m_Bits: 64
   HoldDistance: 3
   HoldEpsilon: 0.1
-  HoldForce: 1
+  HoldForce: 5
   GrabDistance: 10
   ThrowForce: 5
 --- !u!1 &436797832

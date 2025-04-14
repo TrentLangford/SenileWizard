@@ -31,7 +31,7 @@ public class PlayerGrab : MonoBehaviour
         holdPos = lookScript.CameraTransform.position + lookScript.CameraTransform.forward * HoldDistance;
         if (heldBody != null && Vector3.Distance(holdPos, heldBody.position) > HoldEpsilon)
         {
-            heldBody.AddForce((holdPos - heldBody.position) * HoldForce);
+            heldBody.AddForce((holdPos - heldBody.position) * HoldForce * Time.deltaTime * 1000f);
         }
     }
 
