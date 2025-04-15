@@ -214,9 +214,10 @@ GameObject:
   - component: {fileID: 195507391}
   - component: {fileID: 195507390}
   - component: {fileID: 195507389}
+  - component: {fileID: 195507392}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -377,6 +378,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 195507388}
   MoveSpeed: 10
+--- !u!114 &195507392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195507382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 028ff26e44bd66541a53d8c5e4a12355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireballPrefab: {fileID: 4357218266536921232, guid: c7a6fca0b954e9e47b33993b91a9059d, type: 3}
+  fireballSpeed: 420
+  lookscript: {fileID: 195507387}
 --- !u!1 &243847172
 GameObject:
   m_ObjectHideFlags: 0
