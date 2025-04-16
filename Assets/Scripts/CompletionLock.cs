@@ -6,8 +6,9 @@ public class CompletionLock : MonoBehaviour
 {
     public List<Usable> Elements;
     public Objective CompletionObjective;
+    public bool TickChildren = false;
 
-    public Color Ticked;
+    //public Color Ticked;
 
     public void Verify()
     {
@@ -17,7 +18,9 @@ public class CompletionLock : MonoBehaviour
         {
             if (Elements[i].Used)
             {
-                Elements[i].gameObject.GetComponent<MeshRenderer>().material.color = Ticked;
+                //Elements[i].gameObject.GetComponent<MeshRenderer>().material.color = Ticked;
+                
+                if (TickChildren) Elements[i].transform.GetChild(0).gameObject.SetActive(true);
                 correct++;
             }
         }

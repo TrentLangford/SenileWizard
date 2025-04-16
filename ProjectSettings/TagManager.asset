@@ -7,6 +7,7 @@ TagManager:
   - Grab
   - Use
   - Fire
+  - Pot
   layers:
   - Default
   - TransparentFX

@@ -26,7 +26,14 @@ public class OrderLock : MonoBehaviour
         {
             used[i] = Elements[i].Used;
             // nice long chain
-            if (used[i]) Elements[i].gameObject.GetComponent<MeshRenderer>().material.color = Ticked;
+            if (used[i])
+            {
+                MeshRenderer rend = Elements[i].gameObject.GetComponent<MeshRenderer>();
+                for (int j = 0; j < rend.materials.Length; j++)
+                {
+                    if (rend.materials[j].name == "Material.001 (Instance)") rend.materials[j].color = Ticked; 
+                }
+            }
         }
 
         // This is a very odd way to verify a sequence of true/false
@@ -51,7 +58,11 @@ public class OrderLock : MonoBehaviour
         for (int i = 0; i < Elements.Count; i++)
         {
             // very long chain
-            Elements[i].gameObject.GetComponent<MeshRenderer>().material.color = Unticked;
+            MeshRenderer rend = Elements[i].gameObject.GetComponent<MeshRenderer>();
+            for (int j = 0; j < rend.materials.Length; j++)
+            {
+                if (rend.materials[j].name == "Material.001") rend.materials[j].color = Unticked;
+            }
             Elements[i].Res();
             used[i] = false;
         }

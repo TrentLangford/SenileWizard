@@ -47,7 +47,7 @@ public class PlayerGrab : MonoBehaviour
         }
     }
 
-    void StartGrab(Rigidbody body)
+    public void StartGrab(Rigidbody body)
     {
         heldBody = body;
         heldBody.useGravity = false;
@@ -55,8 +55,9 @@ public class PlayerGrab : MonoBehaviour
         heldBody.drag = 15f;
     }
 
-    void EndGrab()
+    public void EndGrab()
     {
+        if (heldBody == null) return;
         heldBody.useGravity = true;
         heldBody.constraints = RigidbodyConstraints.None;
         heldBody.drag = 1f;
