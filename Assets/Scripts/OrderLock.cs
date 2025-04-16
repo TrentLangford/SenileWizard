@@ -61,7 +61,7 @@ public class OrderLock : MonoBehaviour
             MeshRenderer rend = Elements[i].gameObject.GetComponent<MeshRenderer>();
             for (int j = 0; j < rend.materials.Length; j++)
             {
-                if (rend.materials[j].name == "Material.001") rend.materials[j].color = Unticked;
+                if (rend.materials[j].name == "Material.001 (Instance)") rend.materials[j].color = Unticked;
             }
             Elements[i].Res();
             used[i] = false;

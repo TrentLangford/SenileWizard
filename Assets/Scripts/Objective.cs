@@ -10,6 +10,7 @@ public class Objective : MonoBehaviour
     public bool SpawnObject;
     public bool UnhideChild;
     public bool HideSelf;
+    public bool HideChild2;
 
     [Header("Objective Metadata")]
     public string Message;
@@ -27,6 +28,12 @@ public class Objective : MonoBehaviour
         {
             GameObject child = this.transform.GetChild(0).gameObject;
             child.SetActive(true);
+        }
+
+        if (HideChild2)
+        {
+            GameObject child = this.transform.GetChild(1).gameObject;
+            child.SetActive(false);
         }
 
         if (HideSelf)

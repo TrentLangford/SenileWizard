@@ -11,12 +11,6 @@ public class PlayerMovement : MonoBehaviour
     Vector3 moveInput;
     Vector2 input;
     //float yVelocity;
-
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         input.x = Input.GetAxisRaw("Horizontal");
@@ -25,5 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
         moveInput = transform.forward * input.y + transform.right * input.x;
         controller.Move(moveInput * MoveSpeed * Time.deltaTime);
+
+        controller.Move(Vector3.down * 0.2f * Time.deltaTime);  // stay grounded
     }
 }

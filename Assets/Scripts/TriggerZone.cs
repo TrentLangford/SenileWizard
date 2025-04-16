@@ -5,8 +5,10 @@ using UnityEngine;
 public class TriggerZone : MonoBehaviour
 {
     public GameObject Unhide;
+    public bool Triggered = false;
     private void OnTriggerEnter(Collider other)
     {
         Unhide.SetActive(true);
+        Triggered = true;
     }
 }
